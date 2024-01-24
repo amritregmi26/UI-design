@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap');
+
+:root {
+    --header-btn: #0176FF;
+    --logo-text: #404347;
+    --nav-items: #858A8F;
+    --hero-header: #333333;
+    --hero-btn-1: #377DFF;
+    --hero-btn-2: #E5F1FF;
+    --hero-logo: #F5F6FA;
+    --hero-logo-text: #AAB0B7;
+    --light: #FFFFFF;
+    --dark: #000000;
+}
+
+/***************************/
+/******** Universal ********/
+/***************************/
+*, 
+*::before, 
+*::after 
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: var(--light);
+    font-family: "Inter", sans-serif;
+}
+
+.container 
+{
+    max-inline-size: 90rem;
+    inline-size: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.btn
+{
+    font-size: clamp(0.6785rem, 1.38889vw, 1.25rem);
+    line-height: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 0.35735rem;
+    cursor: pointerf;
+}
+
+/***************************/
+/****** Header Section *****/
+/***************************/
+
+.header
+{
+    position: realtive;
+    inline-size: 100%;
+    block-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    cursor: pointer;
+}
+
+.logo-container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+}
+
+.logo-container img 
+{
+    height: auto;
+    width: clamp(1.8rem, 5vw ,4.5rem);
+}
+
+.logo-container .logo-name
+{
+    font-weight: 700;
+    font-size: clamp(1rem, 2.0833vw, 2rem);
+    font-family: "Poppins", sans-serif;
+    color: var(--logo-text);
+}
+
+.navigation 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.34375rem;
+    color: var(--nav-items);
+}
+
+.navigation .nav-item
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.96875rem;
+    font-size: clamp(0.8rem, 1.38889vw, 1.25rem);
+    line-height: 1.5rem;
+    font-weight: 600;
+}
+
+.header .btn
+{
+    background-color: var(--header-btn);
+    border: 0.1rem solid var(--header-btn);
+    color: var(--light);
+    padding: clamp(0.2rem, 1.1111vw, 1rem) clamp(0.2rem, 2.083vw, 1.825rem);
+}
+
+/******** Responsiveness ********/
+@media screen and (max-width: 625px)
+{
+    .container
+    {
+        inline-size: 100%;
+        padding-inline: 0.5rem;
+    }
+
+    .menu-btn
+    {
+        display: block !important;
+        font-size: clamp(0.8rem, 1.38889vw, 1.25rem);
+        background-color: var(--light);
+        color: var(--header-btn);
+        border: 0.1rem solid var(--header-btn);
+        padding: clamp(0.2rem, 1.5vw, 1rem) clamp(0.2rem, 5vw, 1.825rem);
+        border-radius: 2rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .navigation
+    {
+        display: none;
+        flex-direction: column;
+        padding: 0.5rem 0;
+        position: absolute;
+        margin-block-start: 0.5rem;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 0.3rem 0.5rem var(--nav-items);
+    }
+}
+
+/***************************/
+/****** Hero Section *******/
+/***************************/
+.hero
+{
+    position: realtive;
+    inline-size: 100%;
+    block-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 0;
+}
+
+.hero .container 
+{
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.hero .hero-content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    gap: clamp(1.5rem, 2.5vw, 2.25rem);
+    width: 45%;
+}
+
+.hero .hero-content--heading 
+{
+    font-size: clamp(1.5rem, 4.16vw, 3.75rem);
+    line-height: clamp(1.5, 5.667vw, 4.55rem);
+    color: var(--hero-header);
+}
+
+.hero .hero-content--description
+{
+    font-size: clamp(0.8rem, 1.28889vw, 1.25rem);
+    line-height: clamp(0.9rem, 1.355rem, 1.875rem);
+    color: var(--nav-items);
+}
+
+.hero .hero-content--btns
+{
+    display: flex;
+    gap: 2rem;
+}
+
+.hero .hero-content--btns .btn
+{
+    padding: clamp(0.2rem, 1.1111vw, 1rem) clamp(0.2rem, 2.8722vw, 3.125rem);
+}
+
+.hero .hero-content--btns .btn:first-child
+{
+    background-color: var(--hero-btn-1);
+    border: 0.1rem solid var(--hero-btn-1);
+    color: var(--light);
+}
+
+.hero .hero-content--btns .btn:last-child
+{
+    background-color: var(--hero-btn-2);
+    border: 0.1rem solid var(--hero-btn-2);
+    color: var(--hero-btn-1);
+}
+
+.hero .hero-content--payment
+{
+    display: flex;
+    gap: clamp(1.125rem, 2.2222vw, 2rem);
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .hero-content--payment img
+{
+    background-color: var(--hero-logo);
+    border-radius: 50%;
+    padding: 0.9rem;
+}
+
+.hero .hero-content--payment span
+{
+    color: var(--hero-logo-text);
+    font-size: clamp(0.8rem, 1.5vw ,1.5rem);
+    line-height: clamp(1rem, 2.08333vw, 1.875rem);;
+}
+
+.hero .hero-image
+{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-image img
+{
+    max-inline-size: 55vw;
+}
+
+.hero .hero-image img:first-child
+{
+    position: relative;
+    z-index: 0;
+}
+
+.hero .hero-image img:last-child
+{
+    position: absolute;
+    top: 10.75%;
+    right: -1%;
+    z-index: -1;
+}
+
+
+/********* Responsiveness *********/
+@media screen and (max-width: 625px)
+{
+    .hero .container
+    {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .hero .container > *
+    {
+        width: 98%;
+        position: relative;
+    }
+
+    .hero .hero-content--heading 
+    {
+        align-self: center;
+    }
+
+    .hero-image img
+    {
+        max-inline-size: 70vw;
+    }
+
+    .hero .hero-image img:last-child
+    {
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
