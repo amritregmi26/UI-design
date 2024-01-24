@@ -9,6 +9,8 @@
     --hero-btn-2: #E5F1FF;
     --hero-logo: #F5F6FA;
     --hero-logo-text: #AAB0B7;
+    --red: #FF715B;
+    --green: #2DCA8C;
     --light: #FFFFFF;
     --dark: #000000;
 }
@@ -176,7 +178,7 @@ body
     position: relative;
 }
 
-.hero .hero-content
+.content
 {
     display: flex;
     flex-direction: column;
@@ -187,14 +189,14 @@ body
     width: 45%;
 }
 
-.hero .hero-content--heading 
+.content--heading 
 {
     font-size: clamp(1.5rem, 4.16vw, 3.75rem);
     line-height: clamp(1.5, 5.667vw, 4.55rem);
     color: var(--hero-header);
 }
 
-.hero .hero-content--description
+.content--description
 {
     font-size: clamp(0.8rem, 1.28889vw, 1.25rem);
     line-height: clamp(0.9rem, 1.355rem, 1.875rem);
@@ -245,10 +247,10 @@ body
 {
     color: var(--hero-logo-text);
     font-size: clamp(0.8rem, 1.5vw ,1.5rem);
-    line-height: clamp(1rem, 2.08333vw, 1.875rem);;
+    line-height: clamp(1rem, 2.08333vw, 1.875rem);
 }
 
-.hero .hero-image
+.image
 {
     display: flex;
     align-self: center;
@@ -256,18 +258,18 @@ body
     position: relative;
 }
 
-.hero-image img
+.image img
 {
     max-inline-size: 55vw;
 }
 
-.hero .hero-image img:first-child
+.image img:first-child
 {
     position: relative;
     z-index: 0;
 }
 
-.hero .hero-image img:last-child
+.image img:last-child
 {
     position: absolute;
     top: 10.75%;
@@ -291,17 +293,17 @@ body
         position: relative;
     }
 
-    .hero .hero-content--heading 
+    .content--heading 
     {
         align-self: center;
     }
 
-    .hero-image img
+    .image img
     {
         max-inline-size: 70vw;
     }
 
-    .hero .hero-image img:last-child
+    .image img:last-child
     {
         top: 53%;
         left: 50%;
@@ -371,4 +373,252 @@ body
     {
         gap: 2rem;
     }
+}
+
+/***************************/
+/***** Features Section ****/
+/***************************/
+.feature-one
+{
+    position: realtive;
+    inline-size: 100%;
+    block-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 2.5rem 0;
+}
+
+.feature-one .container 
+{
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.feature-one .card-image
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.feature-one .card-image > img
+{
+    position: absolute;
+    top: 15%;
+    left: -7.5%;
+    z-index: -1;
+}
+
+.feature-one .card-image > *
+{
+    max-inline-size: 48vw;
+}
+
+.feature-one .content
+{
+    width: 45%;
+}
+
+.feature-one .list
+{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3.77778vw, 3.4rem);
+}
+
+.list .list-item
+{
+    display: flex;
+    gap: clamp(0.8rem, 2.22222vw, 2rem);
+}
+.list .list-item .icon-holder
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.list-item .content-holder
+{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.8rem, 1.6069vw, 1.44625rem);
+}
+
+.content-holder .content-heading
+{
+    color: var(--hero-header);
+    font-size: clamp(0.9rem, 1.6667vw, 1.5rem);
+    font-weight: 600;
+}
+
+.content-holder .content-description
+{
+    color: var(--nav-items);
+    font-size: clamp(0.8rem, 1.125vw ,1.125rem);
+    line-height: clamp(1rem, 2.08333vw, 1.875rem);
+}
+
+.card-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.8rem, 4.06vw, 4.36rem);
+    padding: clamp(0.6rem, 3.87222vw, 3.5rem) clamp(0.8rem, 3.47222vw, 3.125rem);
+    box-shadow: 0 0 0 2px var(--hero-logo);
+    border-radius: 0.3rem;
+    background-color: var(--light);
+    z-index: 1;
+}
+
+.card-container .card-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-container .card-header .title
+{
+    color: var(--hero-header);
+    font-weight: 600;
+    font-size: clamp(0.8rem, 1.80555vw, 1.625rem);
+}
+
+.card-container .card-header i
+{
+    color: var(--hero-btn-1);
+    background-color: var(--hero-btn-2);
+    padding: 0.6875rem;
+    border-radius: 50%;
+}
+
+.card-container > img 
+{
+    height: auto;
+    width: clamp(5rem, 34.722222vw ,31.25rem);
+}
+
+.card-container .list-container
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: clamp(1.125rem, 1.875vw, 1.6875rem);
+}
+
+.card-container .list-container .list-item
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    gap: clamp(0.6rem, 1.2555vw, 1.25rem);
+}
+
+.card-container .list-container .list-content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    inline-size: 100%;
+}
+
+.card-container .list-container .list-content .list-content--name,
+.card-container .list-container .list-content .list-content--cost
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-container .list-container .list-content div.list-content--cost
+{
+    align-items: flex-end;
+}
+
+.list-content--name  .title,
+.list-content--cost .money
+
+{
+    font-size: clamp(0.6rem, 1.38889vw, 1.25rem);
+    font-weight: 600;
+    color: var(--hero-header);
+}
+
+.list-content--name .description,
+.list-content--cost .payment-type
+{
+    font-size: clamp(0.6rem, 1.025vw ,1.125rem);
+    line-height: clamp(0.8rem, 2.08333vw, 1.875rem);
+    color: var(--hero-logo-text);
+}
+
+.list-content--cost span.money
+{
+    color: red;
+}
+
+.list-content--cost span.money-credit
+{
+    color: var(--green);
+    font-size: clamp(0.6rem, 1.38889vw, 1.25rem);
+    font-weight: 600;
+}
+
+/********* Responsiveness *********/
+@media screen and (max-width: 625px)
+{
+
+    .feature-one 
+    {
+        margin-top: 1rem;
+    }
+    
+    .feature-one .container
+    {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .feature-one .container > *:not(.card-image)
+    {
+        width: 98%;
+        position: relative;
+    }
+
+    .content--heading 
+    {
+        align-self: center;
+    }
+
+    .card-image > img
+    {
+        max-inline-size: 85vw;
+    }
+
+    .card-icon-holder img
+    {
+        height: auto;
+        width: 35px;
+    }
+}
+
+@media screen and (max-width: 400px)
+{
+    .card-icon-holder img
+    {
+        width: 25px;
+    }
+
+    .card-image > img
+    {
+        max-inline-size: 95vw;
+    }
+
 }
