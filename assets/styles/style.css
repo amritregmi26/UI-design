@@ -9,6 +9,7 @@
     --hero-btn-2: #E5F1FF;
     --hero-logo: #F5F6FA;
     --hero-logo-text: #AAB0B7;
+    --feature-two: #397EFF;
     --red: #FF715B;
     --green: #2DCA8C;
     --light: #FFFFFF;
@@ -66,7 +67,6 @@ body
     justify-content: center;
     align-items: center;
     padding: 1.5rem 0;
-    cursor: pointer;
 }
 
 .logo-container 
@@ -579,7 +579,7 @@ body
     {
         margin-top: 1rem;
     }
-    
+
     .feature-one .container
     {
         flex-direction: column-reverse;
@@ -622,3 +622,111 @@ body
     }
 
 }
+
+
+/***************************/
+/*** Feature two Section ***/
+/***************************/
+
+.feature-two
+{
+    position: realtive;
+    inline-size: 100%;
+    block-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 1.5rem 0;
+}
+
+.feature-two .container 
+{
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.feature-two .content
+{
+    width: 45%;
+}
+
+.feature-two-content--btns
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(0.8rem, 1.355rem, 1.75rem);
+}
+
+.feature-two-content--btns > *
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.8rem, 1.355rem, 1.75rem);;
+}
+
+.feature-two-content--btns > * > *
+{
+    height: auto;
+    width: clamp(6rem, 16.875vw, 15.1875rem)
+}
+
+.feature-two-content--navigation
+{
+    color: var(--feature-two);
+    font-size: clamp(0.8rem, 1.38889vw, 1.25rem);
+}
+
+.feature-two-content--navigation i
+{
+    margin-inline-start: 0.4rem;
+}
+
+/********** Responsiveness *********/
+@media screen and (max-width: 625px)
+{
+    .feature-two
+    {
+        margin-top: 1rem;
+    }
+    .feature-two .container
+    {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .feature-two .container > *
+    {
+        width: 98%;
+        position: relative;
+    }
+
+    .content--heading 
+    {
+        align-self: center;
+    }
+
+    .image img
+    {
+        max-inline-size: 70vw;
+    }
+
+    .image img:last-child
+    {
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .feature-two-content--btns > *
+    {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-inline-size: 100%;
+    }
+
+    }
