@@ -51,7 +51,7 @@ body
     font-weight: 600;
     text-transform: capitalize;
     border-radius: 0.35735rem;
-    cursor: pointerf;
+    cursor: pointer;
 }
 
 /***************************/
@@ -250,7 +250,7 @@ body
     line-height: clamp(1rem, 2.08333vw, 1.875rem);
 }
 
-.image
+.hero-image
 {
     display: flex;
     align-self: center;
@@ -258,18 +258,34 @@ body
     position: relative;
 }
 
-.image img
+.hero-image > img,
+.hero-image .img-overlap,
+.hero-image .img-overlap > img
 {
     max-inline-size: 55vw;
 }
 
-.image img:first-child
+.hero-image .img-overlap
+{
+    position: relative;
+}
+
+.hero-image .card-container
+{
+    position: absolute;
+    width: 70%;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-image .img-overlap
 {
     position: relative;
     z-index: 0;
 }
 
-.image img:last-child
+.hero-image > img
 {
     position: absolute;
     top: 10.75%;
@@ -298,12 +314,14 @@ body
         align-self: center;
     }
 
-    .image img
+    .hero-image > img,
+    .hero-image .img-overlap,
+    .hero-image .img-overlap > img
     {
         max-inline-size: 70vw;
     }
 
-    .image img:last-child
+    .hero-image > img
     {
         top: 53%;
         left: 50%;
@@ -685,6 +703,80 @@ body
     margin-inline-start: 0.4rem;
 }
 
+.feature-two .feature-image
+{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+}
+
+.feature-image > img,
+.feature-image .img-overlap,
+.feature-image .img-overlap > img
+{
+    max-inline-size: 55vw;
+}
+
+.feature-image .card-container
+{
+    position: absolute;
+    width: 70%;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.feature-image .card-container .card-header
+{
+    font-size: clamp(0.75rem, calc((26vw/1440) * 100), calc(26rem/16));
+    font-weight: 600;
+    line-height: clamp(0.9rem, calc((31vw/1440) * 100), calc(31vw/16));
+    color: var(--hero-header);
+}
+
+.feature-image .card-container > div 
+{
+    display: flex;
+    inline-size: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--hero-logo-text);
+    background-color: var(--hero-logo);
+    padding: clamp(0.7rem, calc((20vw/1440)*100), calc(20rem/16)) clamp(0.65rem, calc((18vw/1440)*100),calc(18rem/16));
+    font-weight: 500;
+    font-size: clamp(0.4rem, calc((22vw/1440)*100), calc(22rem/16));
+    line-height: (0.7rem, calc((27vw/1440)*100), calc(27rem/16));
+}
+
+.card-num img
+{
+    width: clamp(1.45rem, calc((50vw/1440)*100), calc(50rem/16));
+}
+
+.send-money
+{
+    background-color: var(--hero-btn-1);
+    border: 0.1rem solid var(--hero-btn-1);
+    padding: clamp(0.4rem, calc((20vw/1440) * 100), calc(20rem/16));
+    font-weight: 600;
+    color: var(--light);
+}
+
+.feature-image .img-overlap
+{
+    position: relative;
+    z-index: 0;
+}
+
+.feature-image > img
+{
+    position: absolute;
+    top: 10.75%;
+    right: -1%;
+    z-index: -1;
+}
+
 /********** Responsiveness *********/
 @media screen and (max-width: 625px)
 {
@@ -709,12 +801,14 @@ body
         align-self: center;
     }
 
-    .image img
+    .feature-image > img,
+    .feature-image .img-overlap,
+    .feature-image .img-overlap > img
     {
         max-inline-size: 70vw;
     }
 
-    .image img:last-child
+    .feature-image > img
     {
         top: 53%;
         left: 50%;
@@ -778,6 +872,17 @@ body
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+}
+
+.footer .logo-container img 
+{
+    height: auto;
+    width: clamp(2.5rem, 5vw ,4.5rem);
+}
+
+.footer .logo-container .logo-name
+{
+    font-size: clamp(1.5rem, 2.0833vw, 2rem);
 }
 
 .footer .top-footer .description
